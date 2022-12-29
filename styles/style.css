@@ -136,6 +136,8 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: #F3F9FC;
+
+  user-select: none;
 }
 
 @media (min-width: 500px) {
@@ -200,7 +202,7 @@ main {
   }
 }
 
-/* генератор мема */
+/* generator */
 .generator {
   padding-left: 36px;
   padding-right: 36px;
@@ -246,6 +248,8 @@ main {
   font-size: 1em;
   line-height: 1.5em;
   color: #F3F9FC;
+
+  user-select: none;
 }
 
 .wolf-output {
@@ -448,7 +452,7 @@ main {
     height: 1px;
 
     background-color: rgba(255, 187, 18, 0.1);
-    
+
     content: "";
   }
 
@@ -564,7 +568,6 @@ main {
   
 }
 
-
 .telegram-link:hover svg {
   transform: scale(1.06);
   transition: transform, 0.2s;
@@ -578,6 +581,8 @@ main {
 .channel-name {
   color: #F3F9FC;
   text-align: center;
+
+  user-select: none;
 }
 
 /* _____________pictures_______________ */
