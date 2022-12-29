@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создать мем с волком</title>
+  <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="nav">
+      <button class="nav-toggle" type="button">
+        <svg class="toggle-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="white"/>
+        </svg>
+      </button>
+      <ul class="nav-list nav-list">
+        <li class="nav-list__item--about">
+          <a class="nav-list__link" href="https://telegra.ph/Kak-podderzhat-volkov-07-12">Поблагодарить</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link--current" href="">Конструктор</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="main-title">Конструктор волчьих мемов</h1>
+    </section>
+
+    <section class="generator">
+
+      <div class="choose-background">
+        <b class="bg-legend">Выбери волка</b>
+        <select class="background-select" id="background">
+          <option>Пустая страница</option>
+          <option value="wise">Мудрый волк</option>
+          <option value="angry">Злой волк</option>
+          <option value="alpha">Волк-альфач</option>
+          <option value="clown">Цирковой волк</option>
+          <option value="cutie">Волк-милашка</option>
+          <option value="cry">Волк кричащий</option>
+          <option value="nya">Волк-няшка</option>
+          <option value="man">Волк мужицкий</option>
+          <option value="thinker">Волк-мыслитель</option>
+          <option value="snow">Волк снежный</option>
+          <option value="trees">Волк берёзовый</option>
+          <option value="winter">Волк зимний</option>
+        </select>
+      </div>
+
+      <div class="wolf-output">
+        <div id="ready-meme" class="wolf-meme">
+          <div class="wolf-top"></div>
+          <div class="wolf-bottom"></div>
+        </div>
+        <button class="save-button" id="btn_convert1">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.06952 0.0655695L6.88937 0.131105L6.70668 0.292582L6.52399 0.454059L6.4742 0.60797L6.42437 0.761915V5.09702V9.43216L6.39354 9.45611L6.36275 9.48009L4.39708 7.95637L2.43144 6.43268L2.25299 6.38658L2.07453 6.34048L1.82916 6.34205L1.58378 6.34357L1.40533 6.41539L1.22688 6.48717L1.08416 6.60301L0.941392 6.71887L0.872241 6.84793L0.803046 6.97699L0.803492 7.16033L0.803938 7.34368L0.910207 7.51723L1.01652 7.69079L3.97699 9.98646L6.93742 12.2821L7.11588 12.3269L7.29433 12.3718H7.49509H7.69585L7.87431 12.3269L8.05276 12.2821L11.0253 9.97393L13.9978 7.66573L14.0925 7.51828L14.1871 7.37079L14.1862 7.1663L14.1852 6.96185L14.1037 6.82224L14.0222 6.68263L13.8847 6.57569L13.7473 6.46878L13.5768 6.40543L13.4064 6.34208L13.1387 6.34232L12.871 6.3426L12.6703 6.42254L12.4695 6.50248L10.5551 7.99174L8.64055 9.48103L8.60388 9.4525L8.56716 9.42393L8.55534 4.9967L8.54351 0.569509L8.40851 0.399597L8.27347 0.229685L8.05691 0.125516L7.84036 0.0213472L7.54501 0.0106911L7.24972 0L7.06952 0.0655695ZM0.869966 13.3636L0.691512 13.3877L0.557671 13.4434L0.42383 13.499L0.28111 13.6148L0.138347 13.7306L0.0691955 13.8596L0 13.9887V14.1871V14.3855L0.0931532 14.5352L0.186306 14.685L0.362709 14.8024L0.539111 14.9199L0.726846 14.9599L0.91458 15L7.61394 14.9901L14.3133 14.9802L14.5055 14.8751L14.6977 14.77L14.8307 14.6227L14.9638 14.4754L14.9819 14.2539L15 14.0325L14.9451 13.903L14.8902 13.7736L14.7313 13.6367L14.5724 13.4999L14.3909 13.4243L14.2094 13.3487L7.62893 13.3441L1.04842 13.3394L0.869966 13.3636Z"
+              fill="#F3F9FC" fill-opacity="0.63" />
+          </svg>
+        </button>
+        <div class="image-preview" id="previewImg"></div>
+      </div>
+
+      <div class="text-input">
+        <textarea class="meme-top" type="text" name="top" id="top" rows="1" placeholder="Верхний текст"></textarea>
+        <textarea class="meme-bottom" type="text" name="bottom" id="bottom" rows="1" placeholder="Нижний текст"></textarea>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="telegram-link" href="https://t.me/tupoivolk">
+      <svg class="tg-icon" width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27.9999 56.1665C43.2184 56.1665 55.5554 43.7798 55.5554 28.4999C55.5554 13.2201 43.2184 0.833313 27.9999 0.833313C12.7815 0.833313 0.444443 13.2201 0.444443 28.4999C0.444443 43.7798 12.7815 56.1665 27.9999 56.1665Z" fill="url(#paint0_linear_28_32)"/>
+        <path d="M11.9126 28.26L30.4688 20.5838C32.3005 19.7842 38.5124 17.2254 38.5124 17.2254C38.5124 17.2254 41.3795 16.1059 41.1406 18.8246C41.0609 19.9441 40.4238 23.8622 39.7867 28.1001L37.7957 40.654C37.7957 40.654 37.6364 42.4932 36.2825 42.813C34.9286 43.1328 32.6987 41.6935 32.3005 41.3737C31.9819 41.1338 26.3275 37.5356 24.2568 35.7764C23.6994 35.2966 23.0622 34.3371 24.3365 33.2176C27.2035 30.5789 30.6281 27.3005 32.6987 25.2215C33.6544 24.262 34.6101 22.0231 30.6281 24.7417L19.3988 32.3381C19.3988 32.3381 18.1246 33.1377 15.7354 32.418C13.3461 31.6984 10.5587 30.7388 10.5587 30.7388C10.5587 30.7388 8.64738 29.5394 11.9126 28.26V28.26Z" fill="white"/>
+        <defs>
+        <linearGradient id="paint0_linear_28_32" x1="37.1872" y1="10.0576" x2="23.3155" y2="42.2928" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#37AEE2"/>
+        </linearGradient>
+        </defs>
+        </svg>
+
+        <span class="channel-name">Волк&nbsp;выступает&nbsp;в цирке</span>
+    </a>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script>
+    document.getElementById("btn_convert1").addEventListener("click", function () {
+      html2canvas(document.getElementById("ready-meme")).then(function (canvas) {
+        var anchorTag = document.createElement("a");
+        document.body.appendChild(anchorTag);
+        document.getElementById("previewImg").appendChild(canvas);
+        anchorTag.download = "filename.jpg";
+        anchorTag.href = canvas.toDataURL();
+        anchorTag.target = '_blank';
+        anchorTag.click();
+      });
+    });
+  </script>
+
+</body>
+</body>
+
+</html>

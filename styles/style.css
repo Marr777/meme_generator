@@ -1,0 +1,428 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  font-size: 4vw;
+  line-height: 5vw;
+  background-color: #263238;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.nav {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #263238;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, 0.1),
+    0px 4px 8px rgba(0, 0, 0, 0.08),
+    0px 1px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 50%;
+}
+
+.nav--open {
+  width: 40%;
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-right: 10px;
+  flex-direction: row-reverse;
+
+  border-radius: 24px;
+}
+
+.nav-toggle {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: transform, 0.3s;
+}
+
+.nav-toggle--open {
+  transform: translateX(5vw) rotate(45deg);
+  transition: transform, 0.3s;
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-list.nav-list--open {
+  display: block;
+}
+
+.nav-list__item:not(.nav-list__item--about) {
+  display: none;
+}
+
+.nav-list__item--about a {
+  color: #F3F9FC;
+
+  cursor: pointer;
+}
+
+.hero {
+  padding: 33px 20px 33px;
+  margin: 0 a;
+}
+
+.main-title {
+  width: min-content;
+  margin: 0 auto;
+
+  font-size: 2em;
+  line-height: 1.4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F3F9FC;
+}
+
+
+/* генератор мема */
+.generator {
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 60px;
+  min-width: 240px
+}
+
+.choose-background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 21px;
+}
+
+.background-select {
+  display: block;
+  width: 52%;
+  height: 9vw;
+
+  font-family: Rubik, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+
+  background-color: #FFBB12;
+  border-radius: 6px;
+  border: none;
+}
+
+.background-select:focus-visible {
+  box-shadow: 0 0 0 2px #FFBB12;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.bg-legend {
+  display: block;
+
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #F3F9FC;
+}
+
+.wolf-output {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.save-button {
+  position: absolute;
+  top: 90%;
+  left: 85%;
+  width: 29px;
+  height: 27px;
+  background-color: #263238;
+  border: none;
+  border-radius: 7px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.save-button:hover svg path {
+  fill: #FFBB12;
+}
+
+.wolf-meme {
+  width: 100%;
+  height: 100vw;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #D9D9D9;
+  background-position: center;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image-preview {
+  display: none;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.meme-top,
+.meme-bottom {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+
+  font-family: Rubik, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #F3F9FC;
+
+  background-color: transparent;
+  border: 1px solid #FFBB12;
+  border-radius: 10px;
+
+  resize: none;
+}
+
+.meme-top::placeholder,
+.meme-bottom::placeholder {
+  font-family: Rubik, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: rgba(243, 249, 252, 0.41);
+  vertical-align: middle;
+}
+
+.meme-top:focus,
+.meme-bottom:focus,
+.meme-top:focus-visible,
+.meme-bottom:focus-visible {
+  box-shadow: 0 0 0 1px #FFBB12 inset;
+  outline: none;
+}
+
+/* _____________output_______________ */
+
+.wolf-top,
+.wolf-bottom {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #F3F9FC;
+  text-shadow:
+  -0   -1px 1px #000000,
+   0   -1px 1px #000000,
+  -0    1px 1px #000000,
+   0    1px 1px #000000,
+  -1px -0   1px #000000,
+   1px -0   1px #000000,
+  -1px  0   1px #000000,
+   1px  0   1px #000000,
+  -1px -1px 1px #000000,
+   1px -1px 1px #000000,
+  -1px  1px 1px #000000,
+   1px  1px 1px #000000,
+  -1px -1px 1px #000000,
+   1px -1px 1px #000000,
+  -1px  1px 1px #000000,
+   1px  1px 1px #000000;
+}
+
+.wolf-top {
+  margin-top: 15px;
+}
+
+.wolf-bottom {
+  margin-bottom: 15px;
+}
+
+
+/* __________footer__________ */
+
+.page-footer {
+  padding-bottom: 20px;
+}
+
+.telegram-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: min-content;
+  height: fit-content;
+  margin: 0 auto;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.telegram-link:hover svg {
+  transform: scale(1.06);
+  transition: transform, 0.2s;
+  opacity: 0.8;
+}
+
+.telegram-link:active svg {
+  opacity: 0.6;
+}
+
+.channel-name {
+  color: #F3F9FC;
+  text-align: center;
+}
+
+/* _____________pictures_______________ */
+.angry {
+    background-image: url("../images/bg-wolves/Wolf_angry.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+}
+.wise {
+    background-image: url("../images/bg-wolves/wolf_wise.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.alpha {
+    background-image: url("../images/bg-wolves/wolf-alpha.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.clown {
+    background-image: url("../images/bg-wolves/wolf-clown.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cutie {
+    background-image: url("../images/bg-wolves/wolf-cutie.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nya {
+    background-image: url("../images/bg-wolves/wolf-nya.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cry {
+    background-image: url("../images/bg-wolves/wolf-cry.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.man {
+    background-image: url("../images/bg-wolves/wolf-man.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.thinker {
+    background-image: url("../images/bg-wolves/wolf-thinker.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snow {
+    background-image: url("../images/bg-wolves/folf-snow.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover
+}
+
+.trees {
+    background-image: url("../images/bg-wolves/wolf-trees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.winter {
+    background-image: url("../images/bg-wolves/wolf-winter.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+/* _______media__________ */
+
+@media (max-width: 319px) {
+  body {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .background-select {
+    height: 30px
+  }
+}
