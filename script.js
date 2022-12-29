@@ -50,6 +50,27 @@ background.onchange = function () {
     if (background.value == 'winter') {
         wolf.classList.add('winter')}
         else {wolf.classList.remove('winter')};
+    if (background.value == 'couple') {
+        wolf.classList.add('couple')}
+        else {wolf.classList.remove('couple')};
+    if (background.value == 'growl') {
+        wolf.classList.add('growl')}
+        else {wolf.classList.remove('growl')};
+    if (background.value == 'happy') {
+        wolf.classList.add('happy')}
+        else {wolf.classList.remove('happy')};
+    if (background.value == 'lonely') {
+        wolf.classList.add('lonely')}
+        else {wolf.classList.remove('lonely')};
+    if (background.value == 'noir') {
+        wolf.classList.add('noir')}
+        else {wolf.classList.remove('noir')};
+    if (background.value == 'normal') {
+        wolf.classList.add('normal')}
+        else {wolf.classList.remove('normal')};
+    if (background.value == 'sleep') {
+        wolf.classList.add('sleep')}
+        else {wolf.classList.remove('sleep')};
 };
 
 let topText = document.querySelector('.meme-top');

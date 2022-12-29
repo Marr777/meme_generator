@@ -105,11 +105,20 @@ main {
   display: none;
 }
 
+.nav-list__item--about {
+  display: flex;
+  align-items: center;
+}
+
 .nav-list__item--about a {
   color: #F3F9FC;
   font-size: 15px;
 
   cursor: pointer;
+}
+
+.nav-list__link:hover {
+  opacity: 0.7;
 }
 
 .hero {
@@ -129,8 +138,15 @@ main {
   color: #F3F9FC;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
+  .main-title {
+    font-size: 38px;
+    line-height: 48px;
+    width: 60%;
+  }
+}
 
+@media (min-width: 768px) {
   .nav,
   .nav--open {
     height: 70px;
@@ -159,6 +175,28 @@ main {
   .main-title {
     font-size: 40px;
     line-height: 60px;
+    width: 52%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .nav--open {
+    margin-right: auto;
+    width: 26%;
+  }
+
+  .nav-toggle--open {
+    transform: translateX(5vw) rotate(45deg);
+  }
+
+  .hero {
+    padding: 55px 0 97px;
+  }
+
+  .main-title {
+    font-size: 54px;
+    line-height: 83px;
+    width: 100%;
   }
 }
 
@@ -248,6 +286,32 @@ main {
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (min-width: 500px) and (max-width: 760px) {
+  .wolf-output {
+    max-width: 450px;
+  }
+
+  .wolf-meme {
+    max-height: 500px;
+  }
+
+  .choose-background {
+    width: 427px;
+  }
+
+  .bg-legend  {
+    font-size: 17px;
+  }
+
+  .background-select {
+    width: 230px;
+    height: 40px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .image-preview {
   display: none;
 }
@@ -312,11 +376,13 @@ main {
     margin: 0;
     grid-column: 1/2;
     grid-row: 1/-1;
+    max-width: 480px;
   }
 
   .wolf-meme {
     width: 100%;
     height: 54vw;
+    max-height: 520px;
     margin: 0 auto;
   }
 
@@ -357,6 +423,54 @@ main {
   }
 }
 
+@media (min-width: 1050px) {
+  .generator {
+    padding: 0;
+    padding-bottom: 70px;
+    grid-template-columns: 480px 350px;
+    column-gap: 50px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .choose-background {
+    position: relative;
+
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .choose-background::after {
+    position: absolute;
+    top: 144px;
+    
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(255, 187, 18, 0.1);
+    
+    content: "";
+  }
+
+  .bg-legend {
+    font-size: 20px;
+  }
+
+  .text-input {
+    margin-top: 105px;
+  }
+
+  .meme-top,
+  .meme-bottom {
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .meme-top::placeholder,
+  .meme-bottom::placeholder {
+    font-size: 15px;
+  }
+}
 
 /* _____________output_______________ */
 
@@ -402,7 +516,25 @@ main {
   margin-bottom: 15px;
 }
 
+@media (min-width: 768px) {
+  .wolf-top,
+  .wolf-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% - 40px);
 
+    font-size: 35px;
+    line-height: 37px;
+  }
+
+  .wolf-top {
+    margin-top: 40px;
+  }
+  
+  .wolf-bottom {
+    margin-bottom: 40px;
+  }
+}
 
 /* __________footer__________ */
 
@@ -524,6 +656,48 @@ main {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+
+.couple {
+  background: url("../images/bg-wolves/wolf-couple.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.growl {
+  background: url("../images/bg-wolves/wolf-growl.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.happy {
+  background: url("../images/bg-wolves/wolf-happy.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.lonely {
+  background: url("../images/bg-wolves/wolf-lonley.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.noir {
+  background: url("../images/bg-wolves/wolf-noir.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.normal {
+  background: url("../images/bg-wolves/wolf-normal.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sleep {
+  background: url("../images/bg-wolves/wolf-sleep.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 /* _______media__________ */
