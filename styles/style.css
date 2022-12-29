@@ -66,7 +66,7 @@ main {
 }
 
 .nav--open {
-  width: 40%;
+  width: 50%;
   height: 50px;
   padding-left: 5px;
   padding-right: 10px;
@@ -89,7 +89,7 @@ main {
 }
 
 .nav-toggle--open {
-  transform: translateX(5vw) rotate(45deg);
+  transform: translateX(7vw) rotate(45deg);
   transition: transform, 0.3s;
 }
 
@@ -107,6 +107,7 @@ main {
 
 .nav-list__item--about a {
   color: #F3F9FC;
+  font-size: 15px;
 
   cursor: pointer;
 }
@@ -128,6 +129,38 @@ main {
   color: #F3F9FC;
 }
 
+@media (min-width: 768px) {
+
+  .nav,
+  .nav--open {
+    height: 70px;
+  }
+
+  .nav {
+    width: 70px;
+  }
+
+  .nav--open {
+    width: 52%;
+  }
+
+  .nav-toggle--open {
+    transform: translateX(10vw) rotate(45deg);
+  }
+
+  .nav-list__item--about a {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 40px 52px;
+  }
+
+  .main-title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
 
 /* генератор мема */
 .generator {
@@ -149,6 +182,8 @@ main {
   display: block;
   width: 52%;
   height: 9vw;
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-family: Rubik, sans-serif;
   font-size: 1em;
@@ -261,15 +296,80 @@ main {
   outline: none;
 }
 
+
+@media (min-width: 768px) {
+  .generator {
+    padding-left: 52px;
+    padding-right: 52px;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: 43px max-content 1fr;
+    column-gap: 40px;
+  }
+
+  .wolf-output {
+    position: relative;
+    margin: 0;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+
+  .wolf-meme {
+    width: 100%;
+    height: 54vw;
+    margin: 0 auto;
+  }
+
+  .choose-background {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    justify-content: initial;
+    gap: 20px;
+    height: fit-content;
+  }
+
+  .bg-legend {
+    font-size: 17px;
+  }
+
+  .background-select {
+    width: 80%;
+    height: 40px;
+  
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .text-input {
+    height: fit-content;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 40px;
+  }
+
+  .save-button {
+    width: 39px;
+    height: 37px;
+  }
+}
+
+
 /* _____________output_______________ */
 
 .wolf-top,
 .wolf-bottom {
   padding-left: 10px;
   padding-right: 10px;
+  width: calc(100% - 20px);
+  
 
   font-weight: 700;
   font-size: 25px;
+  line-height: 27px;
   letter-spacing: 0.5px;
   text-align: center;
   color: #F3F9FC;
@@ -290,6 +390,8 @@ main {
    1px -1px 1px #000000,
   -1px  1px 1px #000000,
    1px  1px 1px #000000;
+
+   overflow-wrap: break-word;
 }
 
 .wolf-top {
@@ -299,6 +401,7 @@ main {
 .wolf-bottom {
   margin-bottom: 15px;
 }
+
 
 
 /* __________footer__________ */
@@ -320,6 +423,15 @@ main {
 
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .telegram-link {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  
+}
+
 
 .telegram-link:hover svg {
   transform: scale(1.06);
