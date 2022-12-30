@@ -263,13 +263,18 @@ main {
   position: absolute;
   top: 90%;
   left: 85%;
-  width: 29px;
-  height: 27px;
+  width: 32px;
+  height: 30px;
   background-color: #263238;
+  opacity: 0.6;
   border: none;
   border-radius: 7px;
   padding: 0;
   cursor: pointer;
+}
+
+.save-button:hover {
+  opacity: 1;
 }
 
 .save-button:hover svg path {
@@ -480,9 +485,9 @@ main {
 
 .wolf-top,
 .wolf-bottom {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: calc(100% - 20px);
+  padding-left: 20px;
+  padding-right: 20px;
+  width: calc(100% - 40px);
   
 
   font-weight: 700;
@@ -523,11 +528,11 @@ main {
 @media (min-width: 768px) {
   .wolf-top,
   .wolf-bottom {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: calc(100% - 40px);
+    padding-left: 25px;
+    padding-right: 25px;
+    width: calc(100% - 50px);
 
-    font-size: 35px;
+    font-size: 33px;
     line-height: 37px;
   }
 
