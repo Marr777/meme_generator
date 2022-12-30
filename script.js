@@ -71,6 +71,27 @@ background.onchange = function () {
     if (background.value == 'sleep') {
         wolf.classList.add('sleep')}
         else {wolf.classList.remove('sleep')};
+    if (background.value == 'eating') {
+        wolf.classList.add('eating')}
+        else {wolf.classList.remove('eating')};
+    if (background.value == 'family') {
+        wolf.classList.add('family')}
+        else {wolf.classList.remove('family')};
+    if (background.value == 'sad') {
+        wolf.classList.add('sad')}
+        else {wolf.classList.remove('sad')};
+    if (background.value == 'exotic') {
+        wolf.classList.add('exotic')}
+        else {wolf.classList.remove('exotic')};
+    if (background.value == 'desert') {
+        wolf.classList.add('desert')}
+        else {wolf.classList.remove('desert')};
+    if (background.value == 'prey') {
+        wolf.classList.add('prey')}
+        else {wolf.classList.remove('prey')};
+    if (background.value == 'troop') {
+        wolf.classList.add('troop')}
+        else {wolf.classList.remove('troop')};
 };
 
 let topText = document.querySelector('.meme-top');

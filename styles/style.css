@@ -644,9 +644,9 @@ main {
 }
 
 .snow {
-    background-image: url("../images/bg-wolves/folf-snow.jpg");
+    background-image: url("../images/bg-wolves/wolf-snow.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 100% 50%;
     background-size: cover
 }
 
@@ -701,6 +701,48 @@ main {
 
 .sleep {
   background: url("../images/bg-wolves/wolf-sleep.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.eating {
+  background: url("../images/bg-wolves/wolf-eating.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.family {
+  background: url("../images/bg-wolves/wolf-family.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sad {
+  background: url("../images/bg-wolves/wolf-sad.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.exotic {
+  background: url("../images/bg-wolves/wolf-exotic.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.desert {
+  background: url("../images/bg-wolves/wolf-desert.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.prey {
+  background: url("../images/bg-wolves/wolf-prey.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
+}
+
+.troop {
+  background: url("../images/bg-wolves/wolf-troop.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
