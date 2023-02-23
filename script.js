@@ -1,107 +1,27 @@
-let nav = document.querySelector('.nav');
-let toggle = document.querySelector('.nav-toggle');
-let list = document.querySelector('.nav-list');
+const NAV = document.querySelector('.nav');
+const NAV_TOGGLE = NAV.querySelector('.nav-toggle');
+const NAV_LIST = NAV.querySelector('.nav-list');
+const BACKGROUND_SELECT = document.querySelector('.background-select');
+const WOLF_DIV = document.querySelector('.wolf-meme');
+const TOP_TEXT = document.querySelector('.meme-top');
+const TOP_OUTPUT = WOLF_DIV.querySelector('.wolf-top');
+const BOTTOM_TEXT = document.querySelector('.meme-bottom');
+const BOTTOM_OUTPUT = WOLF_DIV.querySelector('.wolf-bottom');
 
-toggle.onclick = function () {
-  nav.classList.toggle('nav--open');
-  toggle.classList.toggle('nav-toggle--open');
-  list.classList.toggle('nav-list--open');
+NAV_TOGGLE.onclick = function () {
+  NAV.classList.toggle('nav--open');
+  NAV_TOGGLE.classList.toggle('nav-toggle--open');
+  NAV_LIST.classList.toggle('nav-list--open');
 };
 
-
-
-let background = document.querySelector('.background-select');
-let wolf = document.querySelector('.wolf-meme');
-
-background.onchange = function () {
-    if (background.value == 'wise') {
-        wolf.classList.add('wise')}
-        else {wolf.classList.remove('wise')};
-    if (background.value == 'angry') {
-        wolf.classList.add('angry')}
-        else {wolf.classList.remove('angry')};
-    if (background.value == 'alpha') {
-        wolf.classList.add('alpha')}
-        else {wolf.classList.remove('alpha')};
-    if (background.value == 'clown') {
-        wolf.classList.add('clown')}
-        else {wolf.classList.remove('clown')};
-    if (background.value == 'cutie') {
-        wolf.classList.add('cutie')}
-        else {wolf.classList.remove('cutie')};
-    if (background.value == 'cry') {
-        wolf.classList.add('cry')}
-        else {wolf.classList.remove('cry')};
-    if (background.value == 'nya') {
-        wolf.classList.add('nya')}
-        else {wolf.classList.remove('nya')};
-    if (background.value == 'man') {
-        wolf.classList.add('man')}
-        else {wolf.classList.remove('man')};
-    if (background.value == 'thinker') {
-        wolf.classList.add('thinker')}
-        else {wolf.classList.remove('thinker')};
-    if (background.value == 'snow') {
-        wolf.classList.add('snow')}
-        else {wolf.classList.remove('snow')};
-    if (background.value == 'trees') {
-        wolf.classList.add('trees')}
-        else {wolf.classList.remove('trees')};
-    if (background.value == 'winter') {
-        wolf.classList.add('winter')}
-        else {wolf.classList.remove('winter')};
-    if (background.value == 'couple') {
-        wolf.classList.add('couple')}
-        else {wolf.classList.remove('couple')};
-    if (background.value == 'growl') {
-        wolf.classList.add('growl')}
-        else {wolf.classList.remove('growl')};
-    if (background.value == 'happy') {
-        wolf.classList.add('happy')}
-        else {wolf.classList.remove('happy')};
-    if (background.value == 'lonely') {
-        wolf.classList.add('lonely')}
-        else {wolf.classList.remove('lonely')};
-    if (background.value == 'noir') {
-        wolf.classList.add('noir')}
-        else {wolf.classList.remove('noir')};
-    if (background.value == 'normal') {
-        wolf.classList.add('normal')}
-        else {wolf.classList.remove('normal')};
-    if (background.value == 'sleep') {
-        wolf.classList.add('sleep')}
-        else {wolf.classList.remove('sleep')};
-    if (background.value == 'eating') {
-        wolf.classList.add('eating')}
-        else {wolf.classList.remove('eating')};
-    if (background.value == 'family') {
-        wolf.classList.add('family')}
-        else {wolf.classList.remove('family')};
-    if (background.value == 'sad') {
-        wolf.classList.add('sad')}
-        else {wolf.classList.remove('sad')};
-    if (background.value == 'exotic') {
-        wolf.classList.add('exotic')}
-        else {wolf.classList.remove('exotic')};
-    if (background.value == 'desert') {
-        wolf.classList.add('desert')}
-        else {wolf.classList.remove('desert')};
-    if (background.value == 'prey') {
-        wolf.classList.add('prey')}
-        else {wolf.classList.remove('prey')};
-    if (background.value == 'troop') {
-        wolf.classList.add('troop')}
-        else {wolf.classList.remove('troop')};
+BACKGROUND_SELECT.onchange = function () {
+    WOLF_DIV.classList.toggle(`${background.value}`);
 };
 
-let topText = document.querySelector('.meme-top');
-let topOutput = document.querySelector('.wolf-top');
-let bottomText = document.querySelector('.meme-bottom');
-let bottomOutput = document.querySelector('.wolf-bottom');
-
-topText.oninput = function () {
-    topOutput.textContent = topText.value;
+TOP_TEXT.oninput = function () {
+    TOP_OUTPUT.textContent = TOP_TEXT.value;
 };
-bottomText.oninput = function () {
-    bottomOutput.textContent = bottomText.value;
+
+BOTTOM_TEXT.oninput = function () {
+    BOTTOM_OUTPUT.textContent = BOTTOM_TEXT.value;
 };
